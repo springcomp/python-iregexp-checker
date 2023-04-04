@@ -16,8 +16,13 @@ pip install iregexp
 from iregexp import check
 from iregexp import toPCRE
 
-succeeded = check('[azioyy]*')
+import re
+
+succeeded = check('[aeiouy]*')
 
 ## returns PCRE-compatible expression
 regex = toPCRE('.*', anchor = True)
+
+re.compile(regex)
+re.match('aaaa')
 ```
