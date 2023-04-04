@@ -1,8 +1,8 @@
 from tests import unittest
-from iregexp import check
+from iregexp import ensureExpression
 
 class Checker(unittest.TestCase):
 
   def test_checker(self):
     with self.assertRaises(Exception):
-      check('[?', False)
+      ensureExpression('[?')

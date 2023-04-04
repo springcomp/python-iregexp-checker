@@ -125,6 +125,6 @@ class AppendixA(unittest.TestCase):
     self.fail('[\\S ]+')
 
   def succeed(self, expression):
-    self.assertTrue(check(expression)[0])
+    self.assertTrue(check(expression))
   def fail(self, expression):
-    self.assertFalse(check(expression)[0])
+    self.assertFalse(check(expression))
