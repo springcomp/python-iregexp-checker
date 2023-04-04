@@ -55,7 +55,7 @@ def checkExpression(expression, nothrow = True):
     checker = IRegexpChecker()
     for ch in expression:
       checker.check(ord(ch))
-      print('ch: {}({:x}), escape: {}'.format(ch, ord(ch), escape))
+      ## print('ch: {}({:x}), escape: {}'.format(ch, ord(ch), escape))
       if ord(ch) == 0x2e and (not escape) and peek(checker) != Mode.BRACKET:
         chars += ['[', '^', '\\\\', 'n', '\\\\', 'r', ']']
       else:
