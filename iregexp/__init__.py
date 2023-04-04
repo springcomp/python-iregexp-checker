@@ -1,7 +1,7 @@
 from iregexp.checker import IRegexpChecker
 from iregexp.checker import Mode
 
-__version__ = '0.6.0'
+__version__ = '0.6.1'
 
 def check(expression):
   """ Checks a given expression is syntactically valid I-Regexp. """
@@ -24,7 +24,7 @@ def toPCRE(expression, anchor = False):
   """
   expression = checkExpression(expression, False)[1]
   if anchor:
-    return '\\A(?:{})\\z'.format(expression)
+    return '\\A(?:{})\\Z'.format(expression)
   return expression
 
 

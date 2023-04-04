@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='iregexp',
-    version='0.6.0',
+    version='0.6.1',
     description='I-Regexp push-down automaton checker',
     long_description=io.open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
